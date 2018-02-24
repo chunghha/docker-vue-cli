@@ -10,12 +10,12 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "element-ui": "^2.2.0",
     "register-service-worker": "^1.0.0",
     "vue": "^2.5.13",
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^6.0.0",
-    "vue-router": "^3.0.1",
-    "vuetify": "^1.0.3"
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "@types/jest": "^22.0.1",

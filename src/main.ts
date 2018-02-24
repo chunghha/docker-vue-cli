@@ -1,6 +1,7 @@
 import Vue from 'vue';
-import Vuetify from 'vuetify';
-import 'vuetify/dist/vuetify.min.css';
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+import locale from 'element-ui/lib/locale/lang/en';
 
 import 'babel-polyfill';
 
@@ -10,14 +11,7 @@ import './registerServiceWorker';
 
 Vue.config.productionTip = false;
 
-Vue.use(Vuetify, {
-  theme: {
-    primary: '#3f51b5',
-    secondary: '#b0bec5',
-    accent: '#8c9eff',
-    error: '#b71c1c',
-  },
-});
+Vue.use(ElementUI, { locale });
 
 new Vue({
   router,
