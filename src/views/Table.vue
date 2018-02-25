@@ -5,6 +5,7 @@
 </template>
 <template>
   <el-table
+    v-loading="loading"
     :data="users"
     style="width: 100%">
     <el-table-column type="expand">
