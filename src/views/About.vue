@@ -16,12 +16,29 @@
       </template>
     </el-table-column>
     <el-table-column
-      label="Email"
-      prop="email">
+      label="ID"
+      prop="id"
+      width=40>
     </el-table-column>
     <el-table-column
       label="Name"
       prop="name">
+    </el-table-column>
+    <el-table-column
+      label="Email"
+      prop="email">
+    </el-table-column>
+    <el-table-column
+      label="Company"
+      prop="company.name">
+    </el-table-column>
+    <el-table-column
+      label="Phone"
+      prop="phone">
+    </el-table-column>
+    <el-table-column
+      label="Website"
+      prop="website">
     </el-table-column>
   </el-table>
 </template>
@@ -49,3 +66,9 @@ export default {
   }
 };
 </script>
+
+<style>
+.el-table {
+  text-align: left;
+}
+</style>
