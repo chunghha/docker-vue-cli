@@ -4,7 +4,8 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/table">Table</router-link> |
       <router-link to="/form">Form</router-link> |
-      <router-link to="/chart">Chart</router-link>
+      <router-link to="/chart">Chart</router-link> |
+      <router-link to="/carousel">Carousel</router-link>
     </div>
     <router-view/>
   </div>

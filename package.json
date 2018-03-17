@@ -9,13 +9,13 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@antv/g2": "^3.0.5-beta.5",
+    "@antv/g2": "^3.0.5-beta.6",
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
-    "element-ui": "^2.2.1",
+    "element-ui": "^2.2.2",
     "g2-vue": "^1.0.1",
     "register-service-worker": "^1.1.1",
-    "vue": "^2.5.15",
+    "vue": "^2.5.16",
     "vue-class-component": "^6.2.0",
     "vue-property-decorator": "^6.0.0",
     "vue-router": "^3.0.1"
@@ -29,11 +29,11 @@
     "@vue/cli-service": "^3.0.0-beta.6",
     "@vue/test-utils": "^1.0.0-beta.12",
     "babel-core": "^7.0.0-0",
-    "node-sass": "^4.7.2",
+    "node-sass": "^4.8.2",
     "sass-loader": "^6.0.7",
     "ts-jest": "^22.4.1",
     "typescript": "^2.7.2",
-    "vue-template-compiler": "2.5.15"
+    "vue-template-compiler": "2.5.16"
   },
   "browserslist": [
     "> 1%",
