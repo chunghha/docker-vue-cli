@@ -10,7 +10,7 @@
 export default {
   data() {
     return {
-      r: 'https://lorempixel.com/800/400?r='
+      r: 'https://lorempixel.com/1300/960?r='
     };
   }
 };

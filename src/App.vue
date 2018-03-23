@@ -1,13 +1,19 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/table">Table</router-link> |
-      <router-link to="/form">Form</router-link> |
-      <router-link to="/chart">Chart</router-link> |
-      <router-link to="/carousel">Carousel</router-link>
-    </div>
-    <router-view/>
+    <v-app dark>
+      <div id="nav">
+        <router-link to="/">Home</router-link> |
+        <router-link to="/table">Table</router-link> |
+        <router-link to="/form">Form</router-link> |
+        <router-link to="/chart">Chart</router-link> |
+        <router-link to="/carousel">Carousel</router-link>
+      </div>
+      <router-view/>
+      <v-footer class="pa-3">
+        <v-spacer></v-spacer>
+        <div>&copy; {{ new Date().getFullYear() }}</div>
+      </v-footer>
+    </v-app>
   </div>
 </template>
 
@@ -17,7 +23,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #a6bdd4;
 }
 
 #nav {
@@ -26,7 +32,7 @@
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #a6bdd4;
 }
 
 #nav a.router-link-exact-active {
