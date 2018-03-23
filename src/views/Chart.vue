@@ -44,7 +44,7 @@ const RingChart = createG2(chart => {
   })
   chart.guide().html({
     position: [ '50%', '50%' ],
-    html: '<div style="color:#8c8c8c;font-size: 14px;text-align: center;width: 10em;">Fruits<br><span style="color:#8c8c8c;font-size:20px">100</span>items</div>',
+    html: '<div style="color:#a6bdd4;font-size: 14px;text-align: center;width: 10em;">Fruits<br><span style="color:#a6bdd4;font-size:20px">100</span>items</div>',
     alignX: 'middle',
     alignY: 'middle'
   })
@@ -54,6 +54,11 @@ const RingChart = createG2(chart => {
     .label('percent', {
       formatter: (val, item) => {
         return item.point.item + ': ' + val;
+      },
+      textStyle: {
+        fill: '#fff',
+        shadowBlur: 2,
+        shadowColor: 'rgba(0, 0, 0, .45)'
       }
     })
     .tooltip('item*percent', (item, percent) => {
@@ -65,7 +70,7 @@ const RingChart = createG2(chart => {
     })
     .style({
       lineWidth: 1,
-      stroke: '#fff'
+      stroke: '#42b983'
     });
   chart.render()
 })

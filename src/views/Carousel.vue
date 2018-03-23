@@ -1,5 +1,5 @@
 <template>
-  <v-carousel>
+  <v-carousel class="elevation-8">
     <v-carousel-item v-for="item in 6" :key="item">
       <img :src="r + String(item)">
     </v-carousel-item>

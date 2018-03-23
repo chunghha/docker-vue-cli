@@ -7,7 +7,7 @@
   <v-data-table
     :headers="headers"
     :items="users"
-    class="elevation-1"
+    class="elevation-4"
   >
     <template slot="items" slot-scope="props">
       <td>{{ props.item.id }}</td>
@@ -29,6 +29,7 @@ export default {
     return {
       headers: [
         {
+          sortable: false,
           text: 'ID',
           value: 'id'
         },
