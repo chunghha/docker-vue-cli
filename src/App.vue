@@ -1,13 +1,19 @@
 <template>
   <v-app dark>
-    <v-navigation-drawer app class="blue-gray darken-4" dark>
-      <v-toolbar flat>
+    <v-navigation-drawer app class="blue-gray darken-4" dark
+      stateless hide-overlay :mini-variant.sync="mini" v-model="drawer">
+      <v-toolbar flat class="transparent">
         <v-list>
-          <v-list-tile>
-            <v-list-tile-title class="title">
-              Docker Vue CLI
-            </v-list-tile-title>
-        </v-list-tile>
+          <v-list-tile avata>
+            <v-list-tile-avatar>
+              <img src="./assets/logo.png" >
+            </v-list-tile-avatar>
+            <v-list-tile-action>
+              <v-btn icon @click.native.stop="mini = !mini">
+                <v-icon>chevron_left</v-icon>
+            </v-btn>
+            </v-list-tile-action>
+          </v-list-tile>
         </v-list>
       </v-toolbar>
       <v-divider></v-divider>
@@ -30,7 +36,8 @@
         <router-link to="/chart">Chart</router-link> |
         <router-link to="/carousel">Carousel</router-link> | 
         <router-link to="/picker">Picker</router-link> | 
-        <router-link to="/snackbar">Snackbar</router-link>
+        <router-link to="/snackbar">Snackbar</router-link> | 
+        <router-link to="/tabs">Tabs</router-link>
       </div>
     </v-toolbar>
     <v-content>
@@ -53,7 +60,9 @@
           { title: 'Home', icon: 'dashboard' },
           { title: 'About', icon: 'question_answer' }
         ],
-        right: null
+        right: null,
+        drawer: true,
+        mini: true,
       }
     }
   }

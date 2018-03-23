@@ -7,6 +7,7 @@ import Chart from './views/Chart.vue';
 import Carousel from './views/Carousel.vue';
 import Picker from './views/Picker.vue';
 import Snackbar from './views/Snackbar.vue';
+import Tabs from './views/Tabs.vue';
 
 Vue.use(Router);
 
@@ -46,6 +47,11 @@ export default new Router({
       path: '/snackbar',
       name: 'snackbar',
       component: Snackbar,
+    },
+    {
+      path: '/tabs',
+      name: 'tabs',
+      component: Tabs,
     },
   ],
 });
