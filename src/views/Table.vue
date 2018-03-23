@@ -4,44 +4,20 @@
   </div>
 </template>
 <template>
-  <el-table
-    v-loading="loading"
-    :data="users"
-    style="width: 100%">
-    <el-table-column type="expand">
-      <template slot-scope="props">
-        <p>Street: {{ props.row.address.street }}</p>
-        <p>Suite: {{ props.row.address.suite }}</p>
-        <p>City: {{ props.row.address.city }}</p>
-        <p>Zip: {{ props.row.address.zipcode }}</p>
-      </template>
-    </el-table-column>
-    <el-table-column
-      label="ID"
-      prop="id"
-      width=40>
-    </el-table-column>
-    <el-table-column
-      label="Name"
-      prop="name">
-    </el-table-column>
-    <el-table-column
-      label="Email"
-      prop="email">
-    </el-table-column>
-    <el-table-column
-      label="Company"
-      prop="company.name">
-    </el-table-column>
-    <el-table-column
-      label="Phone"
-      prop="phone">
-    </el-table-column>
-    <el-table-column
-      label="Website"
-      prop="website">
-    </el-table-column>
-  </el-table>
+  <v-data-table
+    :headers="headers"
+    :items="users"
+    class="elevation-1"
+  >
+    <template slot="items" slot-scope="props">
+      <td>{{ props.item.id }}</td>
+      <td>{{ props.item.name }}</td>
+      <td>{{ props.item.email }}</td>
+      <td>{{ props.item.company.name }}</td>
+      <td>{{ props.item.phone }}</td>
+      <td>{{ props.item.website }}</td>
+  </template>
+  </v-data-table>
 </template>
 
 <script>
@@ -51,6 +27,17 @@ export default {
   name: 'about',
   data() {
     return {
+      headers: [
+        {
+          text: 'ID',
+          value: 'id'
+        },
+        { text: 'Name', value: 'name' },
+        { text: 'Email', value: 'email' },
+        { text: 'Company', value: 'company.name' },
+        { text: 'Phone', value: 'phone' },
+        { text: 'Website', value: 'website' }
+      ],
       users: [],
       errors: []
     };
@@ -67,9 +54,3 @@ export default {
   }
 };
 </script>
-
-<style>
-.el-table {
-  text-align: left;
-}
-</style>
