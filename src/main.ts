@@ -2,7 +2,7 @@ import Vue from 'vue';
 
 import Vuetify from 'vuetify';
 import colors from 'vuetify/es5/util/colors';
-
+import VueYoutube from 'vue-youtube';
 import 'babel-polyfill';
 
 import App from './App.vue';
@@ -18,6 +18,7 @@ Vue.use(Vuetify, {
     accent: colors.cyan.base,
   },
 });
+Vue.use(VueYoutube);
 
 new Vue({
   router,

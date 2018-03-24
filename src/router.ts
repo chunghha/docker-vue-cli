@@ -9,6 +9,7 @@ import Picker from './views/Picker.vue';
 import Snackbar from './views/Snackbar.vue';
 import Subheader from './views/Subheader.vue';
 import Tabs from './views/Tabs.vue';
+import Youtube from './views/Youtube.vue';
 
 Vue.use(Router);
 
@@ -58,6 +59,11 @@ export default new Router({
       path: '/tabs',
       name: 'tabs',
       component: Tabs,
+    },
+    {
+      path: '/youtube',
+      name: 'youtube',
+      component: Youtube,
     },
   ],
 });
