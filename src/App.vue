@@ -34,11 +34,12 @@
         <router-link to="/table">Table</router-link> |
         <router-link to="/form">Form</router-link> |
         <router-link to="/chart">Chart</router-link> |
-        <router-link to="/carousel">Carousel</router-link> | 
-        <router-link to="/picker">Picker</router-link> | 
-        <router-link to="/snackbar">Snackbar</router-link> | 
-        <router-link to="/subheader">Subheader</router-link> | 
-        <router-link to="/tabs">Tabs</router-link> | 
+        <router-link to="/carousel">Carousel</router-link> |
+        <router-link to="/picker">Picker</router-link> |
+        <router-link to="/snackbar">Snackbar</router-link> |
+        <router-link to="/stepper">Stepper</router-link> |
+        <router-link to="/subheader">Subheader</router-link> |
+        <router-link to="/tabs">Tabs</router-link> |
         <router-link to="/youtube">Youtube</router-link>
       </div>
     </v-toolbar>
