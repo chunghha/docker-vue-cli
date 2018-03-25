@@ -29,7 +29,7 @@
       </v-list>
       <v-list class="pt-0" dense>
         <v-divider light></v-divider>
-        <v-list-tile v-for="item in items" :key="item.title" @click="">
+        <v-list-tile ripple v-for="item in items" :key="item.title" @click="">
           <v-list-tile-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-tile-action>
@@ -54,6 +54,9 @@
         <router-link to="/youtube">Youtube</router-link>
       </div>
       <v-spacer></v-spacer>
+      <v-btn flat icon color="amber" @click="goToRepo">
+        <v-icon>fab fa-github</v-icon>
+      </v-btn>
       <v-btn @click.stop="drawer = !drawer" color="primary" flat dark>Menu</v-btn>
     </v-toolbar>
     <v-content>
@@ -77,8 +80,14 @@
           { title: 'About', icon: 'question_answer' }
         ],
         right: false,
-        drawer: true,
+        drawer: false,
         mini: false,
+        isDark: true
+      }
+    },
+    methods: {
+      goToRepo() {
+        location.assign('https://github.com/chunghha/docker-vue-cli')
       }
     }
   }
