@@ -53,9 +53,8 @@
         <router-link to="/tabs">Tabs</router-link> |
         <router-link to="/youtube">Youtube</router-link>
       </div>
-      <v-flex align-end>
-        <v-btn @click.stop="drawer = !drawer" color="primary" dark>Menu</v-btn>
-      </v-flex>
+      <v-spacer></v-spacer>
+      <v-btn @click.stop="drawer = !drawer" color="primary" flat dark>Menu</v-btn>
     </v-toolbar>
     <v-content>
       <v-container fluid>
@@ -77,7 +76,7 @@
           { title: 'Home', icon: 'dashboard' },
           { title: 'About', icon: 'question_answer' }
         ],
-        right: null,
+        right: false,
         drawer: true,
         mini: false,
       }
