@@ -20,6 +20,7 @@
       item-key="name"
       select-all
       class="elevation-4"
+      sort-icon="arrow_drop_down"
     >
     <v-progress-linear slot="progress" color="deep-orange darken4" indeterminate></v-progress-linear>
       <template slot="items" slot-scope="props">
@@ -30,12 +31,25 @@
             v-model="props.selected"
           ></v-checkbox>
         </td>
-        <td>{{ props.item.id }}</td>
-        <td>{{ props.item.name }}</td>
-        <td>{{ props.item.email }}</td>
-        <td>{{ props.item.company.name }}</td>
-        <td>{{ props.item.phone }}</td>
-        <td>{{ props.item.website }}</td>
+        <td class="text-xs-left">{{ props.item.id }}</td>
+        <td class="text-xs-left">
+        <v-edit-dialog
+          :return-value.sync="props.item.name"
+          lazy
+        > {{ props.item.name }}
+          <v-text-field
+            slot="input"
+            label="Edit"
+            v-model="props.item.name"
+            single-line
+            counter
+            :rules="[max25chars]"
+          ></v-text-field>
+        </v-edit-dialog>
+        <td class="text-xs-left">{{ props.item.email }}</td>
+        <td class="text-xs-left">{{ props.item.company.name }}</td>
+        <td class="text-xs-left">{{ props.item.phone }}</td>
+        <td class="text-xs-left">{{ props.item.website }}</td>
       </template>
     </v-data-table>
   </v-card>
@@ -50,13 +64,14 @@ export default {
     return {
       search: '',
       selected: [],
+      max25chars: (v) => v.length <= 25 || 'Input too long!',
       headers: [
-        { text: 'ID', value: 'id', align: 'center' },
-        { text: 'Name', value: 'name', align: 'center' },
-        { text: 'Email', value: 'email', align: 'center' },
-        { text: 'Company', value: 'company.name', align: 'center' },
-        { text: 'Phone', value: 'phone', align: 'center' },
-        { text: 'Website', value: 'website', align: 'center' }
+        { text: 'ID', value: 'id', align: 'left' },
+        { text: 'Name', value: 'name', align: 'left' },
+        { text: 'Email', value: 'email', align: 'left' },
+        { text: 'Company', value: 'company.name', align: 'left' },
+        { text: 'Phone', value: 'phone', align: 'left' },
+        { text: 'Website', value: 'website', align: 'left' }
       ],
       users: [],
       errors: [],
