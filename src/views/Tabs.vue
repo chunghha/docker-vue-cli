@@ -17,7 +17,7 @@
         v-for="n in 3"
         :key="n"
       >
-        <v-expansion-panel>
+        <v-expansion-panel popout focusable>
           <v-expansion-panel-content v-for="(item,i) in 5" :key="i">
             <div slot="header">Item</div>
             <v-card>
