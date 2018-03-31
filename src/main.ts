@@ -20,6 +20,8 @@ Vue.use(Vuetify, {
 });
 Vue.use(VueYoutube);
 
+export const eventBus = new Vue();
+
 new Vue({
   router,
   render: (h) => h(App),

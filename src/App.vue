@@ -46,6 +46,7 @@
         <router-link to="/form">Form</router-link> |
         <router-link to="/chart">Chart</router-link> |
         <router-link to="/carousel">Carousel</router-link> |
+        <router-link to="/kanban">Kanban</router-link> |
         <router-link to="/picker">Picker</router-link> |
         <router-link to="/snackbar">Snackbar</router-link> |
         <router-link to="/stepper">Stepper</router-link> |
