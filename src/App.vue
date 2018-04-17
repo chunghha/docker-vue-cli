@@ -52,7 +52,8 @@
         <router-link to="/stepper">Stepper</router-link> |
         <router-link to="/subheader">Subheader</router-link> |
         <router-link to="/tabs">Tabs</router-link> |
-        <router-link to="/youtube">Youtube</router-link>
+        <router-link to="/youtube">Youtube</router-link> |
+        <router-link to="/pdf">PDF</router-link>
       </div>
       <v-spacer></v-spacer>
       <v-btn flat icon color="amber" @click="goToRepo">

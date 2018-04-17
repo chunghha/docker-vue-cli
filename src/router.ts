@@ -12,6 +12,7 @@ import Stepper from './views/Stepper.vue';
 import Subheader from './views/Subheader.vue';
 import Tabs from './views/Tabs.vue';
 import Youtube from './views/Youtube.vue';
+import Pdf from './views/Pdf.vue';
 
 Vue.use(Router);
 
@@ -76,6 +77,11 @@ export default new Router({
       path: '/youtube',
       name: 'youtube',
       component: Youtube,
+    },
+    {
+      path: '/pdf',
+      name: 'pdf',
+      component: Pdf,
     },
   ],
 });
