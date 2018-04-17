@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-card>
-      <v-btn absolute dark fab top right color="cyan"
+      <v-btn absolute dark fab top right color="pink lighten-1"
         @click=toggleNewTaskCard()>
         <v-icon>add</v-icon>
       </v-btn>
