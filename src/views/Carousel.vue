@@ -6,12 +6,11 @@
   </v-carousel>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      r: 'https://lorempixel.com/1300/960?r='
-    };
-  }
-};
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+
+@Component
+export default class extends Vue {
+  r = 'https://lorempixel.com/1300/960?r=';
+}
 </script>

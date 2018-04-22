@@ -30,12 +30,11 @@
   </v-stepper>
 </template>
 
-<script>
-  export default {
-    data () {
-      return {
-        e6: 1
-      }
-    }
-  }
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+
+@Component
+export default class extends Vue {
+  e6 = 1;
+}
 </script>

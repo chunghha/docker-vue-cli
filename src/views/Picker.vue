@@ -14,15 +14,15 @@
     </div>
   </div>
 </template>
-<script>
-export default {
-  data() {
-    return {
-      pickerD: null,
-      pickerT: null,
-      landscape: true,
-      reactive: false
-    };
-  }
-};
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+
+@Component
+export default class extends Vue {
+  pickerD = null;
+  pickerT = null;
+  landscape = true;
+  reactive = false;
+}
 </script>

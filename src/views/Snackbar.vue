@@ -48,17 +48,16 @@
   </v-card>
 </template>
 
-<script>
-  export default {
-    data () {
-      return {
-        snackbar: false,
-        y: 'top',
-        x: null,
-        mode: '',
-        timeout: 6000,
-        text: 'Hello, I\'m a snackbar'
-      }
-    }
-  }
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+
+@Component
+export default class extends Vue {
+  snackbar = false;
+  y = 'top';
+  x = null;
+  mode = '';
+  timeout = 6000;
+  text = "Hello, I'm a snackbar";
+}
 </script>

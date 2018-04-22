@@ -50,34 +50,33 @@
   </v-card>
 </template>
 
-<script>
-export default {
-  data: () => ({
-    types: ['Places to Be', 'Places to See'],
-    cards: ['Good', 'Best', 'Finest'],
-    socials: [
-      {
-        icon: 'fab fa-facebook',
-        color: 'indigo'
-      },
-      {
-        icon: 'fab fa-linkedin',
-        color: 'cyan darken-1'
-      },
-      {
-        icon: 'fab fa-instagram',
-        color: 'red lighten-3'
-      }
-    ]
-  }),
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
 
-  methods: {
-    getImage() {
-      const min = 550;
-      const max = 560;
-
-      return Math.floor(Math.random() * (max - min + 1)) + min;
+@Component
+export default class extends Vue {
+  types = ['Places to Be', 'Places to See'];
+  cards = ['Good', 'Best', 'Finest'];
+  socials = [
+    {
+      icon: 'fab fa-facebook',
+      color: 'indigo'
+    },
+    {
+      icon: 'fab fa-linkedin',
+      color: 'cyan darken-1'
+    },
+    {
+      icon: 'fab fa-instagram',
+      color: 'red lighten-3'
     }
+  ];
+
+  getImage() {
+    const min = 550;
+    const max = 560;
+
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
-};
+}
 </script>
