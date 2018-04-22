@@ -20,9 +20,9 @@ import { Component, Vue } from 'vue-property-decorator';
 
 @Component
 export default class extends Vue {
-  pickerD = null;
-  pickerT = null;
-  landscape = true;
-  reactive = false;
+  public pickerD = null;
+  public pickerT = null;
+  public landscape = true;
+  public reactive = false;
 }
 </script>

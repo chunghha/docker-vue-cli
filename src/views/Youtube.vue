@@ -18,14 +18,15 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {
       videoId: 'lG0Ys-2d4MA',
       playerVars: {
-        showInfo: 0
+        showInfo: 0,
       },
-      isPlaying: false
+      isPlaying: false,
     };
   },
   methods: {
@@ -42,13 +43,13 @@ export default {
         console.log('It is stopped!');
         this.isPlaying = false;
       });
-    }
+    },
   },
   computed: {
     player() {
       return this.$refs.youtube.player;
-    }
-  }
+    },
+  },
 };
 </script>
 

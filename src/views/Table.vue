@@ -56,6 +56,7 @@
 </template>
 
 <script>
+
 import axios from 'axios';
 
 export default {
@@ -71,26 +72,26 @@ export default {
         { text: 'Email', value: 'email', align: 'left' },
         { text: 'Company', value: 'company.name', align: 'left' },
         { text: 'Phone', value: 'phone', align: 'left' },
-        { text: 'Website', value: 'website', align: 'left' }
+        { text: 'Website', value: 'website', align: 'left' },
       ],
       users: [],
       errors: [],
-      loading: true
+      loading: true,
     };
   },
   async created() {
     try {
       const response = await axios.get(
-        `http://jsonplaceholder.typicode.com/users`
+        `http://jsonplaceholder.typicode.com/users`,
       );
       this.users = response.data;
       // fake delay
-      const delay = ms => new Promise(res => setTimeout(() => res(), ms));
+      const delay = (ms) => new Promise((res) => setTimeout(() => res(), ms));
       await delay(1000);
       this.loading = false;
     } catch (e) {
       this.errors.push(e);
     }
-  }
+  },
 };
 </script>

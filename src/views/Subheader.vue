@@ -55,24 +55,24 @@ import { Component, Vue } from 'vue-property-decorator';
 
 @Component
 export default class extends Vue {
-  types = ['Places to Be', 'Places to See'];
-  cards = ['Good', 'Best', 'Finest'];
-  socials = [
+  public types = ['Places to Be', 'Places to See'];
+  public cards = ['Good', 'Best', 'Finest'];
+  public socials = [
     {
       icon: 'fab fa-facebook',
-      color: 'indigo'
+      color: 'indigo',
     },
     {
       icon: 'fab fa-linkedin',
-      color: 'cyan darken-1'
+      color: 'cyan darken-1',
     },
     {
       icon: 'fab fa-instagram',
-      color: 'red lighten-3'
-    }
+      color: 'red lighten-3',
+    },
   ];
 
-  getImage() {
+  public getImage() {
     const min = 550;
     const max = 560;
 

@@ -11,6 +11,6 @@ import { Component, Vue } from 'vue-property-decorator';
 
 @Component
 export default class extends Vue {
-  r = 'https://lorempixel.com/1300/960?r=';
+  public r = 'https://lorempixel.com/1300/960?r=';
 }
 </script>

@@ -53,11 +53,11 @@ import { Component, Vue } from 'vue-property-decorator';
 
 @Component
 export default class extends Vue {
-  snackbar = false;
-  y = 'top';
-  x = null;
-  mode = '';
-  timeout = 6000;
-  text = "Hello, I'm a snackbar";
+  public snackbar = false;
+  public y = 'top';
+  public x = null;
+  public mode = '';
+  public timeout = 6000;
+  public text = 'Hello, I\'m a snackbar';
 }
 </script>

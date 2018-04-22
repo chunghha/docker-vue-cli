@@ -74,25 +74,26 @@
 </template>
 
 <script>
-  export default {
-    data () {
-      return {
-        items: [
-          { title: 'Home', icon: 'dashboard' },
-          { title: 'About', icon: 'question_answer' }
-        ],
-        right: false,
-        drawer: false,
-        mini: false,
-        isDark: true
-      }
+
+export default {
+  data() {
+    return {
+      items: [
+        { title: 'Home', icon: 'dashboard' },
+        { title: 'About', icon: 'question_answer' },
+      ],
+      right: false,
+      drawer: false,
+      mini: false,
+      isDark: true,
+    };
+  },
+  methods: {
+    goToRepo() {
+      location.assign('https://github.com/chunghha/docker-vue-cli');
     },
-    methods: {
-      goToRepo() {
-        location.assign('https://github.com/chunghha/docker-vue-cli')
-      }
-    }
-  }
+  },
+};
 </script>
 
 <style>

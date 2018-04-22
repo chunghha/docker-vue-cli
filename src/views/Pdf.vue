@@ -48,37 +48,38 @@
 	</v-container>
 </template>
 <script>
-import pdf from "vue-pdf";
+
+import pdf from 'vue-pdf';
 export default {
   components: {
-    pdf: pdf
+    pdf,
   },
   data() {
     return {
-      direction: "left",
+      direction: 'left',
       show: true,
       pdfList: [
-        "",
-        "https://cdn.mozilla.net/pdfjs/tracemonkey.pdf",
-        "https://cdn.rawgit.com/mozilla/pdf.js/c6e8ca86/test/pdfs/freeculture.pdf",
-        "https://cdn.rawgit.com/mozilla/pdf.js/c6e8ca86/test/pdfs/annotation-link-text-popup.pdf",
-        "https://cdn.rawgit.com/mozilla/pdf.js/c6e8ca86/test/pdfs/calrgb.pdf",
-        "https://cdn.rawgit.com/sayanee/angularjs-pdf/68066e85/example/pdf/relativity.protected.pdf"
+        '',
+        'https://cdn.mozilla.net/pdfjs/tracemonkey.pdf',
+        'https://cdn.rawgit.com/mozilla/pdf.js/c6e8ca86/test/pdfs/freeculture.pdf',
+        'https://cdn.rawgit.com/mozilla/pdf.js/c6e8ca86/test/pdfs/annotation-link-text-popup.pdf',
+        'https://cdn.rawgit.com/mozilla/pdf.js/c6e8ca86/test/pdfs/calrgb.pdf',
+        'https://cdn.rawgit.com/sayanee/angularjs-pdf/68066e85/example/pdf/relativity.protected.pdf',
       ],
-      src: "",
+      src: '',
       loadedRatio: 0,
       page: 1,
       numPages: 0,
-      rotate: 0
+      rotate: 0,
     };
   },
   methods: {
-    password: function(updatePassword, reason) {
+    password(updatePassword, reason) {
       updatePassword(prompt('password is "test"'));
     },
-    error: function(err) {
+    error(err) {
       console.log(err);
-    }
-  }
+    },
+  },
 };
 </script>

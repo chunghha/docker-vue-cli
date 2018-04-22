@@ -32,6 +32,7 @@
 </template>
 
 <script>
+
 import { eventBus } from '../../src/main.ts';
 import draggable from 'vuedraggable';
 
@@ -43,15 +44,15 @@ export default {
         new: [],
         progress: [],
         resolved: [],
-        completed: []
-      }
+        completed: [],
+      },
     };
   },
   components: {
-    draggable
+    draggable,
   },
   created() {
-    eventBus.$on('sendingTask', taskData => {
+    eventBus.$on('sendingTask', (taskData) => {
       this.statuses[taskData.status].push(taskData.task);
     });
   },
@@ -66,7 +67,7 @@ export default {
     },
     newTask(event) {
       eventBus.$emit('statusSelected', event.to.id);
-    }
-  }
+    },
+  },
 };
 </script>

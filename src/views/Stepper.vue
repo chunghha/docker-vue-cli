@@ -35,6 +35,6 @@ import { Component, Vue } from 'vue-property-decorator';
 
 @Component
 export default class extends Vue {
-  e6 = 1;
+  public e6 = 1;
 }
 </script>

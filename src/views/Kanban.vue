@@ -12,22 +12,23 @@
 </template>
 
 <script>
-  import draggable from 'vuedraggable'
-  import Tasks from '../components/Tasks.vue'
-  import Board from '../components/Board.vue'
-  export default {
-    data: () => ({
-      drawer: false
-    }),
-    props: {
-      source: String
-    },
-    components: {
-      draggable,
-      taskcomp: Tasks,
-      board: Board
+
+import draggable from 'vuedraggable';
+import Tasks from '../components/Tasks.vue';
+import Board from '../components/Board.vue';
+export default {
+  data: () => ({
+    drawer: false,
+  }),
+  props: {
+    source: String,
   },
-  }
+  components: {
+    draggable,
+    taskcomp: Tasks,
+    board: Board,
+},
+};
 </script>
 
 <style>

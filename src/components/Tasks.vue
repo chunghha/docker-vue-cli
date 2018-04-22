@@ -34,6 +34,7 @@
 </template>
 
 <script>
+
 import { eventBus } from '../../src/main.ts';
 import draggable from 'vuedraggable';
 
@@ -47,18 +48,18 @@ export default {
         { id: 3, description: 'render async css' },
         { id: 4, description: 'invoke handlers' },
         { id: 5, description: 'allow style element' },
-        { id: 6, description: 'add browser ESM' }
+        { id: 6, description: 'add browser ESM' },
       ],
       targetTask: '',
       targetStatus: '',
-      newTaskCard: false
+      newTaskCard: false,
     };
   },
   components: {
-    draggable
+    draggable,
   },
   created() {
-    eventBus.$on('statusSelected', status => {
+    eventBus.$on('statusSelected', (status) => {
       this.targetStatus = status;
       this.sendTaskData(this.targetTask);
     });
@@ -68,25 +69,25 @@ export default {
       this.targetTask = event.from.id;
     },
     sendTaskData(id) {
-      var myTask = this.tasks.filter((task) => {
+      let myTask = this.tasks.filter((task) => {
         return task.id == id;
       });
-      var taskData = {
+      let taskData = {
         status: this.targetStatus,
-        task: myTask
+        task: myTask,
       };
       eventBus.$emit('sendingTask', taskData);
     },
     inputTask() {
-      var elem = document.getElementById('task-input');
-      var taskId = this.tasks.length;
+      let elem = document.getElementById('task-input');
+      let taskId = this.tasks.length;
       console.log('id: ' + taskId);
       console.log('value: ' + elem.value);
       this.tasks.push({ id: taskId, description: elem.value });
     },
     toggleNewTaskCard() {
       this.newTaskCard = !this.newTaskCard;
-    }
-  }
+    },
+  },
 };
 </script>
