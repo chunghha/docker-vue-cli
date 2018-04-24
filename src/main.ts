@@ -3,6 +3,8 @@ import Vue from 'vue';
 import Vuetify from 'vuetify';
 import colors from 'vuetify/es5/util/colors';
 import VueYoutube from 'vue-youtube';
+import VueChartkick from 'vue-chartkick';
+import Chart from 'chart.js';
 import 'babel-polyfill';
 
 import App from './App.vue';
@@ -19,6 +21,7 @@ Vue.use(Vuetify, {
   },
 });
 Vue.use(VueYoutube);
+Vue.use(VueChartkick, { adapter: Chart });
 
 export const eventBus = new Vue();
 
