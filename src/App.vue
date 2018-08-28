@@ -59,7 +59,9 @@
       <v-btn flat icon color="amber" @click="goToRepo">
         <v-icon>fab fa-github</v-icon>
       </v-btn>
-      <v-btn @click.stop="drawer = !drawer" color="primary" flat dark>Menu</v-btn>
+      <v-btn flat icon @click.stop="drawer = !drawer" color="white">
+        <v-icon dark>menu</v-icon>
+      </v-btn>
     </v-toolbar>
     <v-content>
       <v-container fluid>
