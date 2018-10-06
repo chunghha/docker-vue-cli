@@ -1,6 +1,7 @@
 import Vue from 'vue';
 
 import Vuetify from 'vuetify';
+import 'vuetify/dist/vuetify.min.css';
 import colors from 'vuetify/es5/util/colors';
 import VueYoutube from 'vue-youtube';
 import VueChartkick from 'vue-chartkick';
@@ -10,8 +11,6 @@ import 'babel-polyfill';
 import App from './App.vue';
 import router from './router';
 import './registerServiceWorker';
-
-import ('../node_modules/vuetify/dist/vuetify.min.css');
 
 Vue.config.productionTip = false;
 
