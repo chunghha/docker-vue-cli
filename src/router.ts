@@ -5,7 +5,6 @@ import Table from './views/Table.vue';
 import Form from './views/Form.vue';
 import Chart from './views/Chart.vue';
 import Carousel from './views/Carousel.vue';
-import Kanban from './views/Kanban.vue';
 import Picker from './views/Picker.vue';
 import Snackbar from './views/Snackbar.vue';
 import Stepper from './views/Stepper.vue';
@@ -42,11 +41,6 @@ export default new Router({
       path: '/carousel',
       name: 'carousel',
       component: Carousel,
-    },
-    {
-      path: '/kanban',
-      name: 'kanban',
-      component: Kanban,
     },
     {
       path: '/picker',
