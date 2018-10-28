@@ -10,6 +10,7 @@ import Snackbar from './views/Snackbar.vue';
 import Stepper from './views/Stepper.vue';
 import Subheader from './views/Subheader.vue';
 import Tabs from './views/Tabs.vue';
+import Timeline from './views/Timeline.vue';
 import Youtube from './views/Youtube.vue';
 import Pdf from './views/Pdf.vue';
 
@@ -66,6 +67,11 @@ export default new Router({
       path: '/tabs',
       name: 'tabs',
       component: Tabs,
+    },
+    {
+      path: '/timeline',
+      name: 'timeline',
+      component: Timeline,
     },
     {
       path: '/youtube',
